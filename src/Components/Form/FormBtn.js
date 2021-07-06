@@ -1,8 +1,10 @@
+import React from 'react';
+
 function FormBtn() {
     return ( 
         
-        <input type="submit" value="Add Todo"/>
-        
+        <input type="button" value="Add Todo" class="submit-btn"/>
+
     );
   };
 

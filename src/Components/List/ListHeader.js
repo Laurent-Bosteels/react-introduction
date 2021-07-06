@@ -1,11 +1,16 @@
-const ListTitle = () => {
-    const title = "Peter";
-  };
+import React from 'react';
 
-function ListHeader () {
-    return ( 
-        <div className="list-header">
-        <h3>{title}</h3>
-        </div>
+const Title = () => {
+    const title = "Todos";
+    return <h2>{title}</h2>;
+  };
+  
+  const Header = () => {
+    return (
+      <div className="header">
+        <Title />
+      </div>
     );
   };
+  
+  export default Header

@@ -1,3 +1,5 @@
+import React from 'react';
+
 const Title = () => {
   const title = "My Todo App";
   return <h1>{title}</h1>;
