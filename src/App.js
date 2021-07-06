@@ -1,12 +1,13 @@
-import './App.css';
-import './new.min.css';
-import Header from './Header';
+import './css/new.min.css';
+import './css/App.css';
+import Header from './Components/Header/Header';
 
 function App() {
   return (
     <div className="App">
       <div className="content">
         <Header />
+
       </div>
     </div>
   );
