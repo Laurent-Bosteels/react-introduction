@@ -39,12 +39,13 @@ h2 {
 }
 
 input[type="button"] {
-  background-color:#f74b38;
+  background-color:#f74b38!important;
+  border: 1px solid #f74b38;
 }
 
 input[type="button"]:hover {
   color: black;
-  background-color:white;
+  background-color:white!important;
   border: 1px solid #f74b38;
 }
 
