@@ -8,7 +8,7 @@ import './css/App.css';
 /* COMPONENT IMPORT */
 import Header from './Components/Header/HeaderComp';
 import Form from './Components/Form/FormComp';
-import List from './Components/List/ListComp';
+import Home from './Components/List/ListItem';
 
 function App() {
   return (
@@ -16,7 +16,7 @@ function App() {
       <div className="content">
         <Header />
         <Form />
-        <List />
+        <Home />
       </div>
     </div>
   );

@@ -7,7 +7,7 @@ import FormBtn from './FormBtn';
 function Form() {
     return ( 
             <section className="form">
-            <form action="" class="todo-input">
+            <form action="" className="todo-input">
                 <FormInput/>
                 <FormBtn/>
             </form>

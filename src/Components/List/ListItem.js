@@ -1,14 +1,25 @@
-import React from 'react';
+import { useState } from "react";
+import TodoList from "./TodoList";
 
-function ListItem () {
-    return ( 
-        <div className="list">
-            <ul className="no-bullets">
-            <li><input type="checkbox" id="list-item" name="list-item" value="list-item" /> Learn React</li>
-            <li><input type="checkbox" id="list-item" name="list-item" value="list-item" /> Be Awesome</li>
-            </ul>
-        </div>
-    );
-  };
-  
-  export default ListItem;
+const ListItem = () => {
+  const [todos, setTodos] = useState([
+    { title: 'My First Todo', id: 1},
+    { title: 'My Second Todo', id: 2},
+    { title: 'My Third Todo', id: 3}
+  ])
+
+  const handleDelete = (id) => {
+    const newTodos = todos.filter(blog => blog.id !== id);
+    setTodos(newTodos);
+  }
+
+  return (
+
+    <div className="home">
+      <TodoList todos={todos} title="All todos" handleDelete={handleDelete}/>
+    </div>
+
+  );
+}
+ 
+export default ListItem;
