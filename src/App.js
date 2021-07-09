@@ -2,23 +2,16 @@
 import React from 'react';
 
 /* CSS IMPORT */
-import './css/new.min.css';
+import './css/bootstrap.min.css';
 import './css/App.css';
 
-/* COMPONENT IMPORT */
-import Header from './Components/Header/HeaderComp';
-import Form from './Components/Form/FormComp';
-import Home from './Components/List/ListItem';
+import Main from './Components/List/Main';
 
 function App() {
+
+
   return (
-    <div className="App">
-      <div className="content">
-        <Header />
-        <Form />
-        <Home />
-      </div>
-    </div>
+  <Main/>
   );
 }
 

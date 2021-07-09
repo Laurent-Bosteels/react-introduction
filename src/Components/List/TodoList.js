@@ -1,19 +1,10 @@
-const TodoList = ({ todos, title, handleDelete}) => {
+import React from 'react'
+import Todo from './Todo'
 
-
+export default function TodoList({todos, toggleTodo}) {
   return (
-    <div className="todo-list">
-      <h2>{ title }</h2>
-      {todos.map(todo => (
-        <ul class="no-bullets">
-          <li className="todo-item" key={todo.id} >
-            <input type="checkbox" id="list-item" name="list-item" value="list-item" /> { todo.title } <br/>
-            <button onClick={() => handleDelete(todo.id)}>Delete todo</button>
-          </li>
-        </ul>
-      ))}
-    </div>
-  );
+      todos.map(todo => {
+        return <li key={todo.id} className="list-group-item d-flex justify-content-between align-items-center"><Todo toggleTodo={toggleTodo} todo={todo}/></li>
+      })
+  )
 }
- 
-export default TodoList;
