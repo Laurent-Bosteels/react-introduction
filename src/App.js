@@ -5,13 +5,14 @@ import React from 'react';
 import './css/bootstrap.min.css';
 import './css/App.css';
 
-import Main from './Components/List/Main';
+import Main from './Components/Main';
 
 function App() {
 
-
   return (
+
   <Main/>
+  
   );
 }
 

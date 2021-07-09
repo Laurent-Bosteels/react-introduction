@@ -66,7 +66,6 @@ function Main() {
     }
 
   return (
-    <>
     <div className="App">
 
     <Nav inputTodo={inputTodo} handleAddTodo={handleAddTodo} handleClearTodos={handleClearTodos} />
@@ -75,34 +74,14 @@ function Main() {
         <div className="container-fluid">
             <div className="row">
 
-            <div className="col-md-6">
-                <ul className="list-group">
-                <li className="list-group-item list-group-header d-flex justify-content-between align-items-center">  Not completed <span className="badge badge-pill badge-primary">{todos.filter(todo => !todo.complete).length}</span></li>
-                  
-                  {/* Passing the todos to our todo list = props 
-                  All of the components have props, which we can pass to them just like we can pass attributes to html
-                  
-                  Line code explained: We have a prop todos on our TodoList and want to pass the todos variable to that prop*/}
-
-                  <TodoList todos={todos.filter((todo) => todo.complete === false)} toggleTodo={toggleTodo} />
-
-                </ul>
-              </div>
-
-              <div className="col-md-6">
-                <ul className="list-group">
-                <li className="list-group-item list-group-header d-flex justify-content-between align-items-center">  Completed <span className="badge badge-pill badge-primary">{todos.filter(todo => todo.complete).length}</span></li>
-                <TodoList todos={todos.filter((todo) => todo.complete === true)} toggleTodo={toggleTodo} />
-                </ul>
-              </div>
+                  <TodoList todos={todos.filter((todo) => todo.complete === false)} toggleTodo={toggleTodo} listTitle="Uncompleted" listCount={todos.filter(todo => !todo.complete).length}/>
+                  <TodoList todos={todos.filter((todo) => todo.complete === true)} toggleTodo={toggleTodo} listTitle="Completed" listCount={todos.filter(todo => todo.complete).length}/>
 
             </div>
           </div>
         </div>
-
-    </div>
-    </>
-
+      </div>
+      
   );
 }
 
