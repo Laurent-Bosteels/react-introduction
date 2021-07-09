@@ -68,20 +68,33 @@ function Main() {
   return (
     <div className="App">
 
-    <Nav inputTodo={inputTodo} handleAddTodo={handleAddTodo} handleClearTodos={handleClearTodos} />
+    <Nav 
+    inputTodo={inputTodo} 
+    handleAddTodo={handleAddTodo} 
+    handleClearTodos={handleClearTodos} 
+    />
 
       <div className="wrapper">
         <div className="container-fluid">
             <div className="row">
 
-                  <TodoList todos={todos.filter((todo) => todo.complete === false)} toggleTodo={toggleTodo} listTitle="Uncompleted" listCount={todos.filter(todo => !todo.complete).length}/>
-                  <TodoList todos={todos.filter((todo) => todo.complete === true)} toggleTodo={toggleTodo} listTitle="Completed" listCount={todos.filter(todo => todo.complete).length}/>
+                  <TodoList 
+                  todos={todos.filter((todo) => todo.complete === false)} 
+                  toggleTodo={toggleTodo} listTitle="Uncompleted" 
+                  listCount={todos.filter(todo => !todo.complete).length}
+                  />
+                  
+                  <TodoList
+                  todos={todos.filter((todo) => todo.complete === true)} 
+                  toggleTodo={toggleTodo} listTitle="Completed" 
+                  listCount={todos.filter(todo => todo.complete).length}
+                  />
 
             </div>
           </div>
         </div>
       </div>
-      
+
   );
 }
 
